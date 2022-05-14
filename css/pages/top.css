@@ -1,53 +1,3 @@
-html {
-  height: 100%;
-}
-
-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  font-size: 100%;
-  margin: 0;
-  overflow: hidden;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-#header {
-  width: 100%;
-  height: 40px;
-  background: #000;
-}
-
-.site-title-img {
-  width: 200px;
-  height: 45px;
-  margin-left: 10px;
-}
-
-#footer {
-  background: #000;
-  width: 100%;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-}
-#footer .footer-text {
-  color: #fff;
-  margin: 0;
-  font-size: 0.6rem;
-}
-
 .main-visual {
   position: relative;
 }
@@ -142,4 +92,4 @@ a {
     filter: sepia(0);
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=top.css.map */
