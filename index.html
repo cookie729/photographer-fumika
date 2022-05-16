@@ -7,6 +7,7 @@
   <meta name=”description” content=”ここに内容”>
   <title>Photographer Fumika</title>
   <link rel =”stylesheet” href=”https://unpkg.com/destyle.css@1.0.5/destyle.css”>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -14,45 +15,61 @@
 
 <body>
   <header id=header>
+    <div class="site-title">
       <img class="site-title-img" src="images/photograher.fumika.svg" alt="">
-  </header>
+    </div>
+    </header>
+
   <main>
-    <div class="main-visual">
+    <div class="main-visual mb">
       <img class="peony" src="images/peony.png" alt="牡丹の花">
-      <div class="main-visual-fumika">
-        <img class="fumika-img" src="images/mainvisual.png" alt="Fumikaの写真">
-      </div>
-        <nav>
-          <ul class="main-nav">
-            <li class="nav-title"><a class="nav-text" href="#">Home</a></li>
-            <li class="nav-title"><a class="nav-text" href="about.html">About</a></li>
-            <li class="nav-title"><a class="nav-text"href="category.html">Category</a></li>
-            <li class="nav-title"><a class="nav-text"href="photogallery.html">Photo gallery</a></li>
-            <li class="nav-title"><a class="nav-text"href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="main-visual-nav">
+          <img class="fumika-img" src="images/mainvisual.png" alt="Fumikaの写真">
+          <nav>
+            <ul class="main-nav">
+              <li class="nav-title"><a class="nav-text" href="about.html">About</a></li>
+              <li class="nav-title"><a class="nav-text"href="category.html">Category</a></li>
+              <li class="nav-title"><a class="nav-text"href="photogallery.html">Photo gallery</a></li>
+              <li class="nav-title"><a class="nav-text"href="contact.html">Contact</a></li>
+              <li class="nav-title"><a class="nav-text" href="#">Instagram</a></li>
+            </ul>
+          </nav>
+        </div>
     </div>
 
-    <article class="slide-show">
+    <article class="slide-show mb">
 
     </article>
 
-    <article class="recommend">
-      <img class="recommend-text-img" src="images/recommend.text.svg" alt="おすすめ">
+    <article class="recommend mb">
 
       <div class="recommend-box">
-        <a class="recommend-wrap" href=""><img class="recommend-img" src="images/maple.jpg" alt="紅葉"></a>
-        <a class="recommend-wrap" href=""><img class="recommend-img" src="images/peony-color.jpg" alt="牡丹の花"></a>
-        <a class="recommend-wrap" href=""><img class="recommend-img" src="images/sun&hand.jpg" alt="空と手"></a>
-      </div>
-        
-    </article>
 
+        <a class="recommend-wrap gallery" href="">
+          <img class="recommend-img gallery-img" src="images/yahiko-shrine-guardiandog.JPG" alt="">
+        </a>
+
+        <a class="recommend-wrap gallery" href="">
+          <img class="recommend-img gallery-img" src="images/yahiko-shrine-sake.JPG" alt="">
+        </a>
+
+        <a class="recommend-wrap gallery" href="">
+          <img class="recommend-img gallery-img" src="images/yahiko-shrine.tama-no-hashi.JPG" alt="">
+        </a>
+
+        <a class="recommend-wrap gallery" href="">
+          <img class="recommend-img gallery-img" src="images/peony-color.jpg" alt="">
+        </a>
+
+      </div>
+    </article>
   </main>
 
   <footer id="footer">
     <p class="footer-text">&copy; copyright by Photographer Fumika</p>
   </footer>
-
+  <script src="js/main.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
 </body>
 </html>

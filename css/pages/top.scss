@@ -2,6 +2,19 @@ $bg-color: #000;
 $text-color: #fff;
 
 
+
+
+//------------------------
+// common
+// -----------------------
+.mb {
+  margin-bottom: 50px;
+}
+
+.photo-none {
+  display: none;
+}
+
 //------------------------
 // main-visual
 // -----------------------
@@ -11,16 +24,17 @@ $text-color: #fff;
 .peony{
   position: absolute;
   width: 60%;
+  max-width: 350px;
   top: 0;
   left: -80px;
 }
-.main-visual-fumika {
+.main-visual-nav {
   width: 50%;
+  max-width: 300px;
   position: relative;
-  margin: 0 0 25px auto;
+  margin: 0 0 0 auto;
+  padding-bottom: 0;
 }
-
-
 
 .fumika-img {
   width: 100%;
@@ -29,9 +43,11 @@ $text-color: #fff;
 .main-nav {
   position: absolute;
   top: 20%;
-  right: 25%;
+  left: 10%;
+  padding: 0;
   .nav-title {
-    margin-bottom: 25%;
+    width: 100%;
+    margin-bottom: 28%;
   }
   .nav-text {
     color: $text-color;
@@ -39,28 +55,35 @@ $text-color: #fff;
   }
 }
 
+//------------------------
+// slide-show
+// -----------------------
 .slide-show {
   width: 100%;
-  height: 90px;
+  height: 150px;
   background: $bg-color;
-  margin-bottom: 25px;
 }
 
+//------------------------
+// recommend
+// -----------------------
+
 .recommend {
-  &-text-img {
-    width: 100px;
-    margin-left: 10px;
-  }
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
   &-box {
+    // flex-direction: column;
     display: flex;
-    justify-content: space-around;
+    margin-top: 20px;
   }
   &-wrap {
-    width: 33%;
-    font-size: .8rem;
+    margin-right: 15px;
   }
   &-img {
-    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    object-fit: contain;
     }
   }
 
@@ -76,10 +99,10 @@ $text-color: #fff;
   .main-nav {
     right: 20%;
     .nav-title {
-      margin-bottom: 35%;
+      margin-bottom: 23%;
     }
     .nav-text {
-      font-size: 1.1rem;
+      font-size: 1rem;
       &::after {
         content: "";
         display: block;
@@ -94,24 +117,111 @@ $text-color: #fff;
     }
   }
 
-
+  //------------------------
+  // slide-show
+  // -----------------------
+  .slide-show {
+    width: 100%;
+    height: 200px;
+    background: $bg-color;
+  }
   //------------------------
   // recommend
   // -----------------------
   .recommend {
-    &-wrap {
-      width: 30%;
-    }
+    max-width: 95%;
     &-img {
       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
       transition-duration: .3s;
-      filter: grayscale(100%);
       &:hover {
         box-shadow: 4px 4px 8px 5px rgba(0, 0, 0, .2);
-        transform: scale(1.1);
+        opacity: .7;
+        transform: scale(1.05);
         transition-duration: .3s;
-        filter: sepia(0);
       }
     }
+  }
+}
+
+//------------------------
+// min 800px
+// -----------------------
+@media (min-width: 800px) {
+
+  //------------------------
+  // common
+  // -----------------------
+  body {
+    margin: 0 auto;
+  }
+
+  .photo-none {
+    display: none;
+  }
+
+  .peony{
+    width: 60%;
+    max-width: 500px;
+    left: -150px;
+  }
+  .main-visual-nav {
+    max-width: 400px;
+  }
+  .main-nav {
+    top: 25%;
+    right: 30%;
+    .nav-title {
+      margin-bottom: 30%;
+    }
+    .nav-text {
+      font-size: 1.2rem;
+      &:hover::after {
+        width: 120%;
+        transition-duration: .3s;
+      }
+    }
+  }
+  
+  //------------------------
+  // slide-show
+  // -----------------------
+  .slide-show {
+    height: 300px;
+    background: $bg-color;
+  }
+  
+  //------------------------
+  // recommend
+  // -----------------------
+  .recommend {
+    &-box {
+      justify-content:space-between;
+    }
+    &-wrap {
+      margin-right: 30px;
+    }
+    &-img {
+      height: 350px;
+    }
+  }
+}
+
+
+//------------------------
+// min 1000px
+// -----------------------
+@media (min-width: 1000px) {
+.main-visual,
+.recommend {
+  width: 75%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+  .nav-text {
+    font-size: 1.2rem;
   }
 }

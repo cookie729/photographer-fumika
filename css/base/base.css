@@ -8,7 +8,6 @@ body {
   height: 100%;
   font-size: 100%;
   margin: 0;
-  overflow: hidden;
 }
 
 li {
@@ -17,6 +16,11 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+.mb {
+  margin-bottom: 50px;
 }
 
 #header {
@@ -25,10 +29,15 @@ a {
   background: #000;
 }
 
+.site-title {
+  width: 98%;
+  margin: 0 auto;
+}
+
 .site-title-img {
   width: 200px;
-  height: 45px;
   margin-left: 10px;
+  height: 45px;
 }
 
 #footer {
@@ -38,13 +47,31 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
   text-align: center;
 }
 #footer .footer-text {
   color: #fff;
   margin: 0;
   font-size: 0.6rem;
+}
+
+@media (min-width: 800px) {
+  #header {
+    height: 60px;
+  }
+
+  .site-title-img {
+    width: 300px;
+    height: 70px;
+  }
+}
+@media (min-width: 1000px) {
+  #header {
+    height: 60px;
+  }
+
+  .site-title-img {
+    margin-left: 13%;
+  }
 }
 /*# sourceMappingURL=base.css.map */
