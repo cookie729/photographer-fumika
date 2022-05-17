@@ -42,7 +42,7 @@ $text-color: #fff;
 
 .main-nav {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 10%;
   padding: 0;
   .nav-title {
@@ -62,20 +62,53 @@ $text-color: #fff;
   width: 100%;
   height: 150px;
   background: $bg-color;
+  &-wrap {
+    display: flex;
+    overflow: hidden;
+    height: 150px;
+  }
 }
 
-//------------------------
-// recommend
+.slide-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  animation: slide 55s infinite linear .5s both;
+  padding: 0;
+  margin: 0;
+  // &:hover {
+    //   animation-play-state: paused;
+    // }
+  }
+  .slid-item {
+    width: calc(100vw / 11 );
+  }
+  .slide-img {
+    height: 130px;
+    margin-right: 15px;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  //------------------------
+  // recommend
 // -----------------------
 
 .recommend {
   width: 95%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: scroll;
+  &-text-img {
+    width: 100px;
+  }
   &-box {
-    // flex-direction: column;
     display: flex;
-    margin-top: 20px;
   }
   &-wrap {
     margin-right: 15px;
@@ -84,10 +117,19 @@ $text-color: #fff;
     height: 200px;
     margin-bottom: 50px;
     object-fit: contain;
-    }
   }
+}
 
-
+//------------------------
+// recommend
+// -----------------------
+.lum-lightbox.lum-open {
+  z-index: 4;
+}
+.lum-lightbox-inner img {
+  max-width: 120vw;
+  max-height: 80vh;
+}
 
 //------------------------
 // min 450px
@@ -111,7 +153,7 @@ $text-color: #fff;
         border-bottom: 1px solid $text-color;
       }
       &:hover::after {
-        width: 150%;
+        width: 120%;
         transition-duration: .3s;
       }
     }
@@ -124,7 +166,17 @@ $text-color: #fff;
     width: 100%;
     height: 200px;
     background: $bg-color;
+    &-wrap {
+      height: 200px;
+    }
   }
+  .slide-list {
+    animation: slide 80s infinite linear .5s both;
+  }
+  .slide-img {
+    height: 150px;
+  }
+
   //------------------------
   // recommend
   // -----------------------
@@ -162,10 +214,10 @@ $text-color: #fff;
   .peony{
     width: 60%;
     max-width: 500px;
-    left: -150px;
+    left: -120px;
   }
   .main-visual-nav {
-    max-width: 400px;
+    max-width: 450px;
   }
   .main-nav {
     top: 25%;
@@ -188,12 +240,21 @@ $text-color: #fff;
   .slide-show {
     height: 300px;
     background: $bg-color;
+    &-wrap {
+      height: 300px;
+    }
+  }
+  .slide-img {
+    height: 240px;
   }
   
   //------------------------
   // recommend
   // -----------------------
   .recommend {
+    &-text-img {
+      width: 150px;
+    }
     &-box {
       justify-content:space-between;
     }
@@ -213,7 +274,7 @@ $text-color: #fff;
 @media (min-width: 1000px) {
 .main-visual,
 .recommend {
-  width: 75%;
+  width: 85%;
   margin: {
     left: auto;
     right: auto;

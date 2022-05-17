@@ -32,7 +32,7 @@
 
 .main-nav {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 10%;
   padding: 0;
 }
@@ -50,15 +50,58 @@
   height: 150px;
   background: #000;
 }
+.slide-show-wrap {
+  display: flex;
+  overflow: hidden;
+  height: 150px;
+}
 
+.slide-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  -webkit-animation: slide 55s infinite linear 0.5s both;
+          animation: slide 55s infinite linear 0.5s both;
+  padding: 0;
+  margin: 0;
+}
+
+.slid-item {
+  width: 9.0909090909vw;
+}
+
+.slide-img {
+  height: 130px;
+  margin-right: 15px;
+}
+
+@-webkit-keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .recommend {
   width: 95%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: scroll;
+}
+.recommend-text-img {
+  width: 100px;
 }
 .recommend-box {
   display: flex;
-  margin-top: 20px;
 }
 .recommend-wrap {
   margin-right: 15px;
@@ -68,6 +111,15 @@
   margin-bottom: 50px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.lum-lightbox.lum-open {
+  z-index: 4;
+}
+
+.lum-lightbox-inner img {
+  max-width: 120vw;
+  max-height: 80vh;
 }
 
 @media (min-width: 450px) {
@@ -88,7 +140,7 @@
     border-bottom: 1px solid #fff;
   }
   .main-nav .nav-text:hover::after {
-    width: 150%;
+    width: 120%;
     transition-duration: 0.3s;
   }
 
@@ -96,6 +148,18 @@
     width: 100%;
     height: 200px;
     background: #000;
+  }
+  .slide-show-wrap {
+    height: 200px;
+  }
+
+  .slide-list {
+    -webkit-animation: slide 80s infinite linear 0.5s both;
+            animation: slide 80s infinite linear 0.5s both;
+  }
+
+  .slide-img {
+    height: 150px;
   }
 
   .recommend {
@@ -124,11 +188,11 @@
   .peony {
     width: 60%;
     max-width: 500px;
-    left: -150px;
+    left: -120px;
   }
 
   .main-visual-nav {
-    max-width: 400px;
+    max-width: 450px;
   }
 
   .main-nav {
@@ -150,7 +214,17 @@
     height: 300px;
     background: #000;
   }
+  .slide-show-wrap {
+    height: 300px;
+  }
 
+  .slide-img {
+    height: 240px;
+  }
+
+  .recommend-text-img {
+    width: 150px;
+  }
   .recommend-box {
     justify-content: space-between;
   }
@@ -164,7 +238,7 @@
 @media (min-width: 1000px) {
   .main-visual,
 .recommend {
-    width: 75%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
   }

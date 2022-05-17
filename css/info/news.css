@@ -1,0 +1,12 @@
+#news li {
+  border-bottom: 1px solid #cac9c9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#news li:first-child {
+  border-top: 1px solid #cac9c9;
+}
+#news li a {
+  color: #606060;
+}
+/*# sourceMappingURL=news.css.map */
