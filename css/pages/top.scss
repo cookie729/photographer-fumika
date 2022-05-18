@@ -28,6 +28,9 @@ $text-color: #fff;
   top: 0;
   left: -80px;
 }
+//------------------------
+// main-nav
+// -----------------------
 .main-visual-nav {
   width: 50%;
   max-width: 300px;
@@ -54,6 +57,40 @@ $text-color: #fff;
     font-size: .8rem;
   }
 }
+//------------------------
+// category-nav
+// -----------------------
+// .category-menu {
+//   position: relative;
+//   top: 12px;
+//   right: 12px;
+//   color: $text-color;
+//   padding: .5rem 1rem;
+// }
+// .category-nav {
+//   background: none;
+//   width: 0;
+//   position: relative;
+//   // top: 50px;
+//   // right: 0;
+//   overflow: hidden;
+//   transition: .5s;
+//   &.open-menu {
+//     width: 30%;
+//   }
+// }
+
+// .category-nav li {
+//   text-align: center;
+//   margin: 2rem 0;
+// }
+
+// .category-nav a {
+//   display: block;
+//   color: $text-color;
+// }
+
+
 
 //------------------------
 // slide-show
@@ -103,11 +140,11 @@ $text-color: #fff;
 .recommend {
   width: 95%;
   margin: 0 auto;
-  overflow-x: scroll;
   &-text-img {
     width: 100px;
   }
   &-box {
+    overflow-x: scroll;
     display: flex;
   }
   &-wrap {

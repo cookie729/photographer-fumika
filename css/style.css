@@ -171,12 +171,12 @@ a {
 .recommend {
   width: 95%;
   margin: 0 auto;
-  overflow-x: scroll;
 }
 .recommend-text-img {
   width: 100px;
 }
 .recommend-box {
+  overflow-x: scroll;
   display: flex;
 }
 .recommend-wrap {
