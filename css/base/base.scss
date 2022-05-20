@@ -24,7 +24,9 @@ li {
 
 a {
   text-decoration: none;
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .mb {
@@ -40,12 +42,13 @@ a {
   background: $bg-color;
 }
 .site-title {
-  width: 98%;
-  margin: 0 auto;
+  width: 95%;
+  margin:0 auto;
+  text-align: left;
 }
 .site-title-img {
   width: 200px;
-  margin-left: 10px;
+  // margin-left: 20px;
   height: 45px;
 }
 
@@ -92,8 +95,8 @@ a {
     height: 60px;
   }
 
-  .site-title-img {
-    margin-left: 6%;
-  }
+  // .site-title-img {
+  //   margin-left: 6%;
+  // }
 }
 

@@ -16,6 +16,8 @@ li {
 
 a {
   text-decoration: none;
+}
+a:hover {
   cursor: pointer;
 }
 
@@ -30,13 +32,13 @@ a {
 }
 
 .site-title {
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
+  text-align: left;
 }
 
 .site-title-img {
   width: 200px;
-  margin-left: 10px;
   height: 45px;
 }
 
@@ -68,10 +70,6 @@ a {
 @media (min-width: 1000px) {
   #header {
     height: 60px;
-  }
-
-  .site-title-img {
-    margin-left: 6%;
   }
 }
 /*# sourceMappingURL=base.css.map */

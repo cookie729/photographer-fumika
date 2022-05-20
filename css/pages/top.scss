@@ -21,12 +21,18 @@ $text-color: #fff;
 .main-visual {
   position: relative;
 }
-.peony{
+.peony {
   position: absolute;
   width: 60%;
   max-width: 350px;
   top: 0;
   left: -80px;
+  filter: grayscale(100%);
+  transition-duration: .5s;
+  &:hover {
+    filter: grayscale(0);
+    transition-duration: .5s;
+  }
 }
 //------------------------
 // main-nav
@@ -55,8 +61,20 @@ $text-color: #fff;
   .nav-text {
     color: $text-color;
     font-size: .8rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      transition: width .3s;
+      border-bottom: 1px solid $text-color;
+    }
+    &:hover::after {
+      width: 120%;
+      transition-duration: .3s;
+    }
+    }
   }
-}
+
 //------------------------
 // category-nav
 // -----------------------
@@ -66,6 +84,9 @@ $text-color: #fff;
   top: 0px;
   right: 0px;
   color: $text-color;
+  &:hover {
+    cursor: pointer;
+  }
   .fa-solid {
     margin-left: 5px;
   }
@@ -160,7 +181,7 @@ $text-color: #fff;
 }
 
 //------------------------
-// lightbox
+// light-box
 // -----------------------
 .lum-lightbox.lum-open {
   z-index: 4;
@@ -184,19 +205,8 @@ $text-color: #fff;
     }
     .nav-text {
       font-size: 1rem;
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        transition: width .3s;
-        border-bottom: 1px solid $text-color;
-      }
-      &:hover::after {
-        width: 120%;
-        transition-duration: .3s;
-      }
-    }
   }
+}
 
 //------------------------
 // category-nav
@@ -245,7 +255,6 @@ $text-color: #fff;
   // recommend
   // -----------------------
   .recommend {
-    max-width: 95%;
     &-img {
       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .2);
       transition-duration: .3s;
@@ -269,10 +278,6 @@ $text-color: #fff;
   // -----------------------
   body {
     margin: 0 auto;
-  }
-
-  .photo-none {
-    display: none;
   }
 
   .peony{
@@ -311,9 +316,11 @@ $text-color: #fff;
       width: 132%;
     }
     li {
-      margin: 2.5rem 0;
+      margin: 2.2rem 0;
     }
   }
+
+
   //------------------------
   // slide-show
   // -----------------------
@@ -335,9 +342,6 @@ $text-color: #fff;
     &-text-img {
       width: 150px;
     }
-    &-box {
-      justify-content:space-between;
-    }
     &-wrap {
       margin-right: 30px;
     }
@@ -352,12 +356,21 @@ $text-color: #fff;
 // min 1000px
 // -----------------------
 @media (min-width: 1000px) {
-.main-visual,
-.recommend {
-  width: 85%;
-  margin: {
-    left: auto;
-    right: auto;
+// .recommend {
+//   width: 97%;
+//   margin: {
+//     left: auto;
+//     right: auto;
+//   }
+  // padding: 0;
+// }
+
+.category-nav {
+  &.open-menu {
+    width: 132%;
+  }
+  li {
+    margin: 2.5rem 0;
   }
 }
 
