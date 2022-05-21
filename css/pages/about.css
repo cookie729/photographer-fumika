@@ -3,10 +3,9 @@ body {
 }
 
 .container {
-  height: 95vh;
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -15,21 +14,19 @@ body {
   margin: 0 0 0 auto;
   position: relative;
 }
-
 .about-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 50;
 }
-
 .about-text {
   position: absolute;
   top: 50px;
   left: 50px;
+  z-index: 0;
 }
 
 #footer {
@@ -37,13 +34,9 @@ body {
   bottom: 0;
 }
 
-@media (min-width: 800px) {
-  .container {
-    height: 92vh;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    overflow: hidden;
+@media (min-width: 1000px) {
+  .about {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=about.css.map */

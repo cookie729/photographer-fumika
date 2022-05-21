@@ -15,7 +15,6 @@ body {
   height: 100%;
   font-size: 100%;
   margin: 0;
-  // background: rgb(255, 236, 249);
 }
 
 li {
@@ -48,7 +47,6 @@ a {
 }
 .site-title-img {
   width: 200px;
-  // margin-left: 20px;
   height: 45px;
 }
 
@@ -59,13 +57,12 @@ a {
 #footer {
   background: $bg-color;
   width: 100%;
-  height: 25px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  // position: absolute;
-  // bottom: 0;
+  position: relative;
+  z-index: 100;
 
   .footer-text {
     color: $text-color;
@@ -75,9 +72,9 @@ a {
 }
 
 //------------------------
-// min 800px
+// min 600px
 // -----------------------
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   #header {
     height: 60px;
   }
@@ -94,9 +91,5 @@ a {
   #header {
     height: 60px;
   }
-
-  // .site-title-img {
-  //   margin-left: 6%;
-  // }
 }
 
