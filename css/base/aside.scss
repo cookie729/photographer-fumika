@@ -5,31 +5,68 @@ $text-color: #fff;
   position: absolute;
   top: 12px;
   right: 12px;
-  padding: .5rem 1rem;
 }
 
 .sp-main-nav {
-  background: gray;
+  background: rgba(0, 0, 0, .7);
   width: 0;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
   position: absolute;
   top: 40px;
   right: 0;
-  overflow: hidden;
+  opacity: 0;
   transition: .5s;
   z-index: 100;
+  margin: 0 auto;
   .nav-title {
-    text-align: center;
-    margin: 2rem 0;
-    .nav-text {
-      display: block;
-    }
+    margin: 3rem 0;
+    color: $text-color;
+  }
+  .nav-text {
+    margin: 0 auto;
+    width: 150px;
+    display: block;
+    color: $text-color;
+  }
+  .category-menu:hover {
+      cursor: pointer;
+  }
+}
+
+.category-nav {
+  background: rgba(0, 0, 0, .8);
+  width: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  transition: .5s;
+  opacity: 0;
+  &.open-menu {
+    width: 150px;
+    transition: .5s;
+    opacity: 1;
+  }
+  li {
+    margin: 2rem auto;
+    width: 80px;
+  }
+  a {
+    text-align: left;
   }
 }
 
 .sp-main-nav.open-menu {
   width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: .7s;
 }
 
+.main-nav {
+  display: none;
+}
 
 //------------------------
 // min 600px
@@ -50,9 +87,16 @@ $text-color: #fff;
   }
 
   //------------------------
+  // hamburger-menu
+  // -----------------------
+  .hamburger-menu {
+    display: none;
+  }
+  //------------------------
   // main-nav
   // -----------------------
   .main-nav {
+    display: block;
     padding: 0;
     width: 95%;
     margin: 0 auto;

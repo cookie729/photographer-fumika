@@ -2,29 +2,67 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  padding: 0.5rem 1rem;
 }
 
 .sp-main-nav {
-  background: gray;
+  background: rgba(0, 0, 0, 0.7);
   width: 0;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
   position: absolute;
   top: 40px;
   right: 0;
-  overflow: hidden;
+  opacity: 0;
   transition: 0.5s;
   z-index: 100;
+  margin: 0 auto;
 }
 .sp-main-nav .nav-title {
-  text-align: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
+  color: #fff;
 }
-.sp-main-nav .nav-title .nav-text {
+.sp-main-nav .nav-text {
+  margin: 0 auto;
+  width: 150px;
   display: block;
+  color: #fff;
+}
+.sp-main-nav .category-menu:hover {
+  cursor: pointer;
+}
+
+.category-nav {
+  background: rgba(0, 0, 0, 0.8);
+  width: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+.category-nav.open-menu {
+  width: 150px;
+  transition: 0.5s;
+  opacity: 1;
+}
+.category-nav li {
+  margin: 2rem auto;
+  width: 80px;
+}
+.category-nav a {
+  text-align: left;
 }
 
 .sp-main-nav.open-menu {
   width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.main-nav {
+  display: none;
 }
 
 @media (min-width: 600px) {
@@ -38,7 +76,12 @@
     overflow: hidden;
   }
 
+  .hamburger-menu {
+    display: none;
+  }
+
   .main-nav {
+    display: block;
     padding: 0;
     width: 95%;
     margin: 0 auto;
