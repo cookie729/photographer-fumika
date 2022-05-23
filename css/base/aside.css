@@ -2,150 +2,160 @@
   position: absolute;
   top: 12px;
   right: 12px;
+  z-index: 150;
+  background: none;
+  color: #fff;
+  border: none;
+}
+.btn-menu:hover {
+  cursor: pointer;
 }
 
-.sp-main-nav {
+.mobile-main-nav {
   background: rgba(0, 0, 0, 0.7);
   width: 0;
-  height: 100%;
+  height: 100vh;
   padding: 0;
-  overflow: hidden;
   position: absolute;
   top: 40px;
   right: 0;
   opacity: 0;
   transition: 0.5s;
-  z-index: 100;
+  z-index: 150;
   margin: 0 auto;
 }
-.sp-main-nav .nav-title {
+.mobile-main-nav .nav-title {
   margin: 3rem 0;
   color: #fff;
 }
-.sp-main-nav .nav-text {
+.mobile-main-nav .nav-text {
   margin: 0 auto;
   width: 150px;
   display: block;
   color: #fff;
 }
-.sp-main-nav .category-menu:hover {
+.mobile-main-nav .mobile-category-menu:hover {
   cursor: pointer;
 }
-
-.category-nav {
+.mobile-main-nav .mobile-category-menu .fa-solid {
+  margin-left: 5px;
+}
+.mobile-main-nav .mobile-category-menu .mobile-category-nav {
   background: rgba(0, 0, 0, 0.8);
-  width: 0;
+  width: 0%;
   padding: 0;
   position: absolute;
-  overflow: hidden;
   transition: 0.5s;
   opacity: 0;
+  cursor: auto;
 }
-.category-nav.open-menu {
+.mobile-main-nav .mobile-category-menu .mobile-category-nav.open-menu {
   width: 150px;
   transition: 0.5s;
   opacity: 1;
 }
-.category-nav li {
+.mobile-main-nav .mobile-category-menu .mobile-category-nav li {
   margin: 2rem auto;
   width: 80px;
 }
-.category-nav a {
+.mobile-main-nav .mobile-category-menu .mobile-category-nav .nav-text {
   text-align: left;
 }
+.mobile-main-nav .mobile-category-menu .mobile-category-nav .nav-text:hover {
+  cursor: pointer;
+}
 
-.sp-main-nav.open-menu {
+.mobile-main-nav.open-menu {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 1;
   transition: 0.7s;
 }
 
-.main-nav {
+.page-nav {
   display: none;
 }
 
 @media (min-width: 600px) {
+  .hamburger-menu {
+    display: none;
+  }
+
   .page-nav {
+    display: block;
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     background: #000;
+    background: rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
-
-  .hamburger-menu {
-    display: none;
-  }
-
-  .main-nav {
-    display: block;
+  .page-nav .main-nav {
     padding: 0;
     width: 95%;
-    margin: 0 auto;
-    margin-top: 2rem;
+    margin: 2rem auto 0 auto;
+    z-index: 100;
   }
-  .main-nav .nav-title {
+  .page-nav .main-nav .nav-title {
     width: 20%;
     margin-bottom: 3rem;
   }
-  .main-nav .nav-text {
+  .page-nav .main-nav .nav-text {
     color: #fff;
     font-size: 0.8rem;
   }
-  .main-nav .nav-text::after {
+  .page-nav .main-nav .nav-text::after {
     content: "";
     display: block;
     width: 0;
     transition: width 0.3s;
     border-bottom: 1px solid #fff;
   }
-  .main-nav .nav-text:hover::after {
+  .page-nav .main-nav .nav-text:hover::after {
     width: 100%;
     transition-duration: 0.3s;
   }
 
-  .main-nav .category-menu {
+  .page-nav .category-menu {
     position: relative;
     width: 20%;
   }
-  .main-nav .category-menu:hover {
+  .page-nav .category-menu:hover {
     cursor: pointer;
   }
-  .main-nav .category-menu .fa-solid {
+  .page-nav .category-menu .fa-solid {
     margin-left: 5px;
   }
-  .main-nav .category-menu:hover .fa-solid {
+  .page-nav .category-menu:hover .fa-solid {
     display: none;
   }
 
   .category-nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     width: 0;
     padding: 0;
     position: absolute;
+    opacity: 0;
     overflow: hidden;
     transition: 0.5s;
   }
   .category-nav.open-menu {
+    opacity: 1;
     width: 100%;
   }
   .category-nav li {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
-  .category-nav a {
+  .category-nav .nav-text {
     display: block;
     width: 150px;
   }
 }
 @media (min-width: 800px) {
-  .main-nav .nav-title:hover::after {
-    transition-duration: 0.3s;
-  }
-  .main-nav .nav-text {
-    font-size: 1.1rem;
+  .page-nav .main-nav .nav-text {
+    font-size: 1rem;
   }
 
   .category-menu .fa-solid {
@@ -153,13 +163,10 @@
   }
 }
 @media (min-width: 1000px) {
-  .main-nav .nav-title {
+  .page-nav .main-nav .nav-title {
     width: 15%;
   }
-  .main-nav .nav-title:hover::after {
-    transition-duration: 0.5s;
-  }
-  .main-nav .nav-text {
+  .page-nav .main-nav .nav-text {
     font-size: 1.1rem;
   }
 }
