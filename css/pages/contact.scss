@@ -1,99 +1,184 @@
+$text-color: #fff;
+$bg-color: #000;
+
+//------------------------
+// max 450
+// -----------------------
+
+//------------------------
+// common
+// -----------------------
+body {
+  position: relative;
+  overflow: hidden;
+}
+.mb {
+  margin-bottom: 40px;
+}
+
+.br {
+  border-radius: 6px;
+}
+.bg {
+  background:$bg-color;
+}
+
+.form-text {
+  font-size: .8rem;
+  color: $text-color;
+  letter-spacing: .05rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+//------------------------
+// form
+// -----------------------
 .form {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 80px;
-}
-.form-item {
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  &-img {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 50;
+    transform:scale(2);
+  }
+  &-wrap {
+    position: relative;
+    width: 70%;
+    margin: 1.3rem auto 0 auto;
+    z-index: 50;
+  }
 }
+
 .form-item-label {
   width: 100%;
-  margin: 0;
-  letter-spacing: 0.05em;
-  font-size: 1rem;
   display: flex;
   align-items: center;
 }
 
 .form-item-label-required {
-  border-radius: 6px;
-  margin-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 48px;
-  display: inline-block;
+  margin-right: 10px;
   text-align: center;
-  background: #5bc8ac;
-  color: #fff;
-  font-size: 14px;
-}
-.form-item-label-required {
-  border-radius: 4px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  // padding {
+  //   top: 4px;
+  //   bottom: 4px;
+  // }
+  font-size: .8rem;
   width: 32px;
-  font-size: 10px;
+}
+.form-item-input,
+.form-item-textarea {
+  background: rgba(0255, 255, 255, .2);
+  margin-left: 0;
+  width: 100%;
+  color: $bg-color;
+  color: rgb(215, 215, 215);
 }
 .form-item-input {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 48px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
-  margin-left: 0;
-  margin-top: 18px;
-  height: 40px;
-  flex: inherit;
-  font-size: 15px;
+  height: 2rem;
+  border: none;
 }
 .form-item-textarea {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 216px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
+  height: 5rem;
 }
-.form-item-textarea {
-  margin-top: 18px;
-  margin-left: 0;
-  height: 200px;
-  flex: inherit;
-  font-size: 15px;
-}
+
+//------------------------
+// button
+// -----------------------
+
 .form-btn {
-  border-radius: 6px;
-  margin-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
+  margin: 30px auto 50px auto;
+  padding: 12px;
+  width: 30%;
   display: block;
-  letter-spacing: 0.05em;
-  background: #5bc8ac;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
+  opacity: 1;
+  transition-duration: .2s;
+  &:hover {
+    opacity: .8;
+    transition-duration: .2s;
+  }
 }
-.form-btn {
-  margin-top: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 160px;
-  font-size: 16px;
+
+
+//------------------------
+// min 450px
+// -----------------------
+@media (min-width: 450px) {
+  .mb {
+    margin-bottom: 50px;
+  }
+  
+  .form {
+    &-img {
+      bottom: 0;
+      left: 200px;
+    }
+  }
+
+  .form-item-textarea {
+    height: 10rem;
+  }
+  .form-text {
+    font-size: 1rem;
+  }
+}
+//------------------------
+// min 600px
+// -----------------------
+@media (min-width: 600px) {
+  .container {
+    width: 100%;
+    height:100vh;
+    position: relative;
+    display: flex;
+  }
+
+  .form {
+    width: 80%;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    z-index: 100;
+    &-img {
+      height: 100%;
+      width: 100%;
+      bottom: 200px;
+      transform:scale(1.7);
+    }
+    &-wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+//------------------------
+// min 1000
+// -----------------------
+@media (min-width: 1000px) {
+  .form {
+    width: 85%;
+    &-wrap {
+      width: 45%;
+      margin: {
+        top: 1.1rem;
+        left: 50px;
+        right: auto;
+      }
+      &-item-input {
+        width: 300px;
+        &-item-textarea {
+          width: 500px;
+        }
+      }
+    }
+  }
 }

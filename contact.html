@@ -13,48 +13,120 @@
 </head>
 
 <body>
-  <header id=header>
+  <header id="header">
     <div class="site-title">
-      <a href="index.html">
+      <a class="home" href="index.html">
         <img class="site-title-img" src="images/photograher.fumika.svg" alt="">
-      </div>
-    </a>
+      </a>
+    </div>
+
+
+    <nav class="hamburger-menu">
+      <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <ul class="mobile-main-nav main-nav">
+          <li class="nav-title">
+            <a class="nav-text" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-title">
+            <a class="nav-text"href="about.html">About</a>
+          </li>
+          
+          <div class="mobile-category-menu nav-title nav-text">Category<i class="fa-solid fa-caret-down"></i>
+            <ul class="mobile-category-nav">
+              <li><a class="nav-text" href="city.html">City</a></li>
+              <li><a class="nav-text" href="nature.html">Nature</a></li>
+              <li><a class="nav-text" href="star.html">Night Sky</a></li>
+              <li><a class="nav-text" href="people.html">People</a></li>
+              <li><a class="nav-text" href="sky.html">Sky</a></li>
+            </ul>
+          </div>
+
+          <li class="nav-title">
+            <a class="nav-text"href="photogallery.html">Photo gallery</a>
+          </li>
+
+
+          <li class="nav-title">
+            <a class="nav-text" href="https://www.instagram.com/kofu1121/">Instagram</a>
+          </li>
+        </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="form">
+    <div class="container">
+      
+      <aside class="page-nav">
+        <nav>
+          <ul class="main-nav">
+            <li class="nav-title">
+              <a class="nav-text" href="index.html">Home</a>
+            </li>
 
-      <div class="form-item">
-        <p class="form-item-label"><span class="form-item-label-required">必須</span>Name</p>
-        <input type="text" class="form-item-input">
+            <li class="nav-title">
+              <a class="nav-text"href="about.html">About</a>
+            </li>
+
+            <div class="category-menu nav-title nav-text">Category<i class="fa-solid fa-caret-down"></i>
+              <ul class="category-nav">
+                <li><a class="nav-text" href="city.html">City</a></li>
+                <li><a class="nav-text" href="nature.html">Nature</a></li>
+                <li><a class="nav-text" href="star.html">Night Sky</a></li>
+                <li><a class="nav-text" href="people.html">People</a></li>
+                <li><a class="nav-text" href="sky.html">Sky</a></li>
+              </ul>
+            </div>
+
+            <li class="nav-title">
+              <a class="nav-text"href="photogallery.html">Photo gallery</a>
+            </li>
+
+            <li class="nav-title">
+              <a class="nav-text" href="https://www.instagram.com/kofu1121/">Instagram</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="form">
+        <img class="form-img" src="images/moon.jpg" alt="">
+        <!-- <img class="form-img" src="images/full-moon.jpg" alt=""> -->
+        <div class="form-wrap">
+          
+          <div class="form-item mb">
+            <p class="form-item-label form-text">
+              <span class="form-item-label-required br bg">必須</span>Name</p>
+            <input type="text" class="form-item-input br">
+          </div>
+        
+          <div class="form-item mb">
+            <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Phone</p>
+            <input type="text" class="form-item-input form-text br" placeholder="  例）000-0000-0000">
+          </div>
+        
+          <div class="form-item mb">
+            <p class="form-item-label form-text"><span class="form-item-label-required  br">必須</span>Email</p>
+            <input type="email" class="form-item-input br" placeholder="  例）example@gmail.com">
+          </div>
+        
+          <div class="form-item">
+            <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Message</p>
+            <textarea class="form-item-textarea br"></textarea>
+          </div>
+        
+          <input type="submit" class="form-btn form-text mb br bg" value="send">
+        </div>
       </div>
-
-      <div class="form-item">
-        <p class="form-item-label"><span class="form-item-label-required">必須</span>Phone</p>
-        <input type="text" class="form-item-input" placeholder="例）000-0000-0000">
-      </div>
-
-      <div class="form-item">
-        <p class="form-item-label"><span class="form-item-label-required">必須</span>Email</p>
-        <input type="email" class="form-item-input" placeholder="例）example@gmail.com">
-      </div>
-
-      <div class="form-item">
-        <p class="form-item-label"><span class="form-item-label-required">必須</span>Message</p>
-        <textarea class="form-item-textarea"></textarea>
-      </div>
-
-      <input type="submit" class="form-btn" value="送信する">
     </div>
-
   </main>
-
+  
   <footer id="footer">
     <p class="footer-text">&copy; copyright by Photographer Fumika</p>
   </footer>
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
   <script src="js/main.js"></script>
-
+  
 </body>
 </html>

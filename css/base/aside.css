@@ -89,7 +89,6 @@
     top: 0;
     left: 0;
     background: #000;
-    background: rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
   .page-nav .main-nav {
@@ -154,10 +153,6 @@
   }
 }
 @media (min-width: 800px) {
-  .page-nav .main-nav .nav-text {
-    font-size: 1rem;
-  }
-
   .category-menu .fa-solid {
     margin-left: 7px;
   }
