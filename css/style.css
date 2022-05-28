@@ -30,11 +30,11 @@ a:hover {
   height: 40px;
   background: #000;
   position: relative;
-  z-index: 100;
+  z-index: 150;
 }
 
 .site-title {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   text-align: left;
 }

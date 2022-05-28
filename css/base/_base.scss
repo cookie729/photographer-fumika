@@ -32,6 +32,14 @@ a {
   margin-bottom: 50px;
 }
 
+.section-title {
+  margin: {
+    top: 40px;
+    bottom: 20px;
+  }
+  font-size: 2rem;
+
+}
 //------------------------
 // header
 // -----------------------
@@ -40,10 +48,10 @@ a {
   height: 40px;
   background: $bg-color;
   position: relative;
-  z-index: 100;
+  z-index: 150;
 }
 .site-title {
-  width: 95%;
+  width: 90%;
   margin:0 auto;
   text-align: left;
 }
@@ -85,13 +93,8 @@ a {
     width: 300px;
     height: 70px;
   }
-}
-//------------------------
-// min 1000px
-// -----------------------
-@media (min-width: 1000px) {
-  #header {
-    height: 60px;
+  .site-title {
+    width: 95%;
   }
 }
 
