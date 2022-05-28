@@ -12,17 +12,20 @@ $bg-color: #000;
   position: relative;
   background:rgb(241, 241, 241);
   padding-top: 40px;
+  margin: 0;
 }
 
 #header {
   position: fixed;
   width: 100%;
+  z-index:50;
 }
 
 .page-nav {
   padding-top: 60px;
   position: fixed;
 }
+
 // //------------------------
 // // adjustment
 // // -----------------------
@@ -44,8 +47,7 @@ $bg-color: #000;
 // // -----------------------
 .photo-gallery {
   background: rgb(241, 241, 241);
-  // width: 90%;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
 }
 
 // //------------------------
@@ -68,7 +70,7 @@ $bg-color: #000;
   width: 31%;
 }
 
-.gallery {
+.gallery-lightbox {
   width: 31%;
   margin-bottom: 2.5%;
 }
@@ -119,7 +121,7 @@ $bg-color: #000;
 // // min 1000
 // // -----------------------
 @media (min-width: 1000px) {
-  .gallery {
+  .gallery-lightbox {
     width: 23%;
     margin-bottom: 2%;
   }

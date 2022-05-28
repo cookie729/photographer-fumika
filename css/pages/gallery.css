@@ -3,11 +3,13 @@
   position: relative;
   background: #f1f1f1;
   padding-top: 40px;
+  margin: 0;
 }
 
 #header {
   position: fixed;
   width: 100%;
+  z-index: 50;
 }
 
 .page-nav {
@@ -37,7 +39,7 @@
 
 .photo-gallery {
   background: #f1f1f1;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
 }
 
 .gallery-item-wrap {
@@ -58,7 +60,7 @@
   width: 31%;
 }
 
-.gallery {
+.gallery-lightbox {
   width: 31%;
   margin-bottom: 2.5%;
 }
@@ -101,7 +103,7 @@
   }
 }
 @media (min-width: 1000px) {
-  .gallery {
+  .gallery-lightbox {
     width: 23%;
     margin-bottom: 2%;
   }

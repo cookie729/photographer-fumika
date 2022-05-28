@@ -114,10 +114,10 @@ $text-color: #fff;
 // -----------------------
 @media (min-width: 600px) {
   .main-container {
-    width:85%;
+    width:80%;
   }
   .contents-width {
-    width: 85%;
+    width: 80%;
   }
 
   // -----------------------
@@ -243,4 +243,12 @@ $text-color: #fff;
       }
     }
   }
+
+  .main-container {
+    width:85%;
+  }
+  .contents-width {
+    width: 85%;
+  }
+
 }
