@@ -21,6 +21,10 @@
   position: fixed;
 }
 
+.gallery-mb {
+  margin-bottom: 25px;
+}
+
 .adjustment-top {
   -o-object-position: top;
      object-position: top;

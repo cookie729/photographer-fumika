@@ -41,13 +41,14 @@ a {
 font-family: 'Gaegu', cursive;
   margin: {
     top: 40px;
-    bottom: 25px;
+    bottom: 20px;
   }
   line-height: 0;
   font-size: 2.1rem;
 }
 
-p {
+p,
+.location-title {
   font-family: 'M PLUS 1p', sans-serif;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 1.1rem;

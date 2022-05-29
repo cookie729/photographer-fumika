@@ -30,10 +30,20 @@ a:hover {
 }
 
 .section-title {
+  font-family: "Delius", cursive;
+  font-family: "Chilanka", cursive;
+  font-family: "Gaegu", cursive;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 0;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
+}
+
+p,
+.location-title {
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
 }
 
 #header {
@@ -92,6 +102,15 @@ a:hover {
 
   .site-title {
     width: 95%;
+  }
+
+  .mb {
+    margin-bottom: 100px;
+  }
+
+  .section-title {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
   }
 }
 .main-container {
@@ -228,7 +247,7 @@ a:hover {
   }
   .page-nav .main-nav .nav-text {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .page-nav .main-nav .nav-text::after {
     content: "";

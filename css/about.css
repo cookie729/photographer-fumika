@@ -8,7 +8,6 @@ body {
   height: 100%;
   font-size: 100%;
   margin: 0;
-  font-family: "Delius", cursive;
 }
 
 li {
@@ -35,13 +34,13 @@ a:hover {
   font-family: "Chilanka", cursive;
   font-family: "Gaegu", cursive;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 0;
-  font-size: 1.5rem;
-  font-size: 3rem;
+  font-size: 2.1rem;
 }
 
-p {
+p,
+.location-title {
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 1.1rem;
@@ -103,6 +102,15 @@ p {
 
   .site-title {
     width: 95%;
+  }
+
+  .mb {
+    margin-bottom: 100px;
+  }
+
+  .section-title {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
   }
 }
 .main-container {
