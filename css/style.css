@@ -55,7 +55,7 @@ a:hover {
 }
 
 .lum-lightbox.lum-open {
-  z-index: 4;
+  z-index: 100;
 }
 
 .lum-lightbox-inner img {
@@ -199,35 +199,47 @@ a:hover {
 
 .slide-show {
   width: 100%;
-  height: 150px;
-  background: #000;
+  font-size: 0;
 }
 .slide-show-wrap {
   display: flex;
   overflow: hidden;
-  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.slid-item {
+  width: 11.1111111111vw;
+}
+
+.slide-img {
+  margin: 0;
+  background: #000;
+}
+
+.slide-img-left {
+  padding: 14px 7px 7px 7px;
+  height: 80px;
+}
+
+.slide-img-right {
+  padding: 7px 7px 14px 7px;
+  height: 110px;
 }
 
 .slide-list {
   display: flex;
   list-style: none;
-  align-items: center;
-  -webkit-animation: slide 55s infinite linear 0.5s both;
-          animation: slide 55s infinite linear 0.5s both;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.slid-item {
-  width: 9.0909090909vw;
+.slide-left {
+  -webkit-animation: slide-left 30s infinite linear 0.5s both;
+          animation: slide-left 30s infinite linear 0.5s both;
 }
 
-.slide-img {
-  height: 130px;
-  margin-right: 15px;
-}
-
-@-webkit-keyframes slide {
+@-webkit-keyframes slide-left {
   from {
     transform: translateX(0);
   }
@@ -236,12 +248,34 @@ a:hover {
   }
 }
 
-@keyframes slide {
+@keyframes slide-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
+  }
+}
+.slide-right {
+  -webkit-animation: slide-right 25s infinite linear 0.5s both;
+          animation: slide-right 25s infinite linear 0.5s both;
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 .recommend {
@@ -293,24 +327,6 @@ a:hover {
     font-size: 0.9rem;
     width: 75px;
     margin: 9% auto;
-  }
-
-  .slide-show {
-    width: 100%;
-    height: 200px;
-    background: #000;
-  }
-  .slide-show-wrap {
-    height: 200px;
-  }
-
-  .slide-list {
-    -webkit-animation: slide 80s infinite linear 0.5s both;
-            animation: slide 80s infinite linear 0.5s both;
-  }
-
-  .slide-img {
-    height: 150px;
   }
 
   .recommend-img {

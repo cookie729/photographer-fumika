@@ -55,7 +55,7 @@ a:hover {
 }
 
 .lum-lightbox.lum-open {
-  z-index: 4;
+  z-index: 100;
 }
 
 .lum-lightbox-inner img {
