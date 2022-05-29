@@ -8,6 +8,7 @@ body {
   height: 100%;
   font-size: 100%;
   margin: 0;
+  font-family: "Delius", cursive;
 }
 
 li {
@@ -30,9 +31,20 @@ a:hover {
 }
 
 .section-title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  font-family: "Delius", cursive;
+  font-family: "Chilanka", cursive;
+  font-family: "Gaegu", cursive;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  line-height: 0;
+  font-size: 1.5rem;
+  font-size: 3rem;
+}
+
+p {
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
 }
 
 #header {
@@ -227,7 +239,7 @@ a:hover {
   }
   .page-nav .main-nav .nav-text {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .page-nav .main-nav .nav-text::after {
     content: "";
@@ -297,6 +309,10 @@ a:hover {
     width: 85%;
   }
 }
+.full-height {
+  height: 89vh;
+}
+
 .container {
   width: 100%;
   position: relative;
@@ -350,7 +366,8 @@ a:hover {
 
 .location-title {
   font-weight: normal;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
 .gallery-item-wrap::after {

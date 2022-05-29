@@ -7,6 +7,10 @@ $bg-color: #000;
 // //------------------------
 // // common
 // // -----------------------
+.full-height {
+  height: 89vh;
+}
+
 .container {
   width:100%;
   position: relative;
@@ -61,7 +65,8 @@ $bg-color: #000;
 }
 .location-title {
   font-weight: normal;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
 .gallery-item-wrap::after {

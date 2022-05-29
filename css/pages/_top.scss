@@ -157,20 +157,19 @@ $text-color: #fff;
 }
 
 .slide-left {
-  animation: slide-left 30s infinite linear .5s both;
+  animation: slide-left 30s infinite linear both;
 }
-  @keyframes slide-left {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
 
 .slide-right {
-  // height: 80px;
-  animation: slide-right 25s infinite linear .5s both;
+  animation: slide-right 40s infinite linear both;
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
   @keyframes slide-right {
@@ -188,9 +187,6 @@ $text-color: #fff;
 .recommend {
   width: 95%;
   margin: 0 auto;
-  &-text-img {
-    width: 100px;
-  }
   &-box {
     overflow-x: scroll;
     display: flex;
@@ -199,22 +195,11 @@ $text-color: #fff;
     margin-right: 15px;
   }
   &-img {
-    height: 200px;
-    margin-bottom: 50px;
+    height: 150px;
     object-fit: contain;
   }
 }
 
-// //------------------------
-// // light-box
-// // -----------------------
-// .lum-lightbox.lum-open {
-//   z-index: 4;
-// }
-// .lum-lightbox-inner img {
-//   max-width: 120vw;
-//   max-height: 80vh;
-// }
 
 //------------------------
 // min 450px
@@ -346,21 +331,18 @@ $text-color: #fff;
     }
   }
 
-
   //------------------------
   // slide-show
   // -----------------------
-  .slide-show {
-    height: 300px;
-    background: $bg-color;
-    &-wrap {
-      height: 300px;
-    }
+  .slide-img-left {
+    padding: 18px 9px 9px 9px;
+    height: 130px;
   }
-  .slide-img {
-    height: 240px;
+  .slide-img-right {
+    padding: 9px 9px 18px 9px;
+    height: 180px;
   }
-  
+
   //------------------------
   // recommend
   // -----------------------
@@ -369,28 +351,18 @@ $text-color: #fff;
       width: 150px;
     }
     &-wrap {
-      margin-right: 30px;
+      margin-right: 20px;
     }
     &-img {
-      height: 350px;
+      height: 250px;
     }
   }
 }
-
 
 //------------------------
 // min 1000px
 // -----------------------
 @media (min-width: 1000px) {
-// .recommend {
-//   width: 97%;
-//   margin: {
-//     left: auto;
-//     right: auto;
-//   }
-  // padding: 0;
-// }
-
 .category-nav {
   &.open-menu {
     width: 132%;
@@ -399,7 +371,6 @@ $text-color: #fff;
     margin: 2.5rem 0;
   }
 }
-
 
   .nav-text {
     font-size: 1.2rem;

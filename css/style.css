@@ -30,9 +30,19 @@ a:hover {
 }
 
 .section-title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  font-family: "Delius", cursive;
+  font-family: "Chilanka", cursive;
+  font-family: "Gaegu", cursive;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  line-height: 0;
+  font-size: 2.1rem;
+}
+
+p {
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
 }
 
 #header {
@@ -91,6 +101,15 @@ a:hover {
 
   .site-title {
     width: 95%;
+  }
+
+  .mb {
+    margin-bottom: 100px;
+  }
+
+  .section-title {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
   }
 }
 .mb {
@@ -235,8 +254,13 @@ a:hover {
 }
 
 .slide-left {
-  -webkit-animation: slide-left 30s infinite linear 0.5s both;
-          animation: slide-left 30s infinite linear 0.5s both;
+  -webkit-animation: slide-left 30s infinite linear both;
+          animation: slide-left 30s infinite linear both;
+}
+
+.slide-right {
+  -webkit-animation: slide-right 40s infinite linear both;
+          animation: slide-right 40s infinite linear both;
 }
 
 @-webkit-keyframes slide-left {
@@ -256,11 +280,6 @@ a:hover {
     transform: translateX(-100%);
   }
 }
-.slide-right {
-  -webkit-animation: slide-right 25s infinite linear 0.5s both;
-          animation: slide-right 25s infinite linear 0.5s both;
-}
-
 @-webkit-keyframes slide-right {
   from {
     transform: translateX(-100%);
@@ -269,7 +288,6 @@ a:hover {
     transform: translateX(0);
   }
 }
-
 @keyframes slide-right {
   from {
     transform: translateX(-100%);
@@ -282,9 +300,6 @@ a:hover {
   width: 95%;
   margin: 0 auto;
 }
-.recommend-text-img {
-  width: 100px;
-}
 .recommend-box {
   overflow-x: scroll;
   display: flex;
@@ -293,8 +308,7 @@ a:hover {
   margin-right: 15px;
 }
 .recommend-img {
-  height: 200px;
-  margin-bottom: 50px;
+  height: 150px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -384,26 +398,24 @@ a:hover {
     margin: 2.2rem 0;
   }
 
-  .slide-show {
-    height: 300px;
-    background: #000;
-  }
-  .slide-show-wrap {
-    height: 300px;
+  .slide-img-left {
+    padding: 18px 9px 9px 9px;
+    height: 130px;
   }
 
-  .slide-img {
-    height: 240px;
+  .slide-img-right {
+    padding: 9px 9px 18px 9px;
+    height: 180px;
   }
 
   .recommend-text-img {
     width: 150px;
   }
   .recommend-wrap {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .recommend-img {
-    height: 350px;
+    height: 250px;
   }
 }
 @media (min-width: 1000px) {
