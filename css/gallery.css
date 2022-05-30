@@ -40,9 +40,9 @@ a:hover {
 }
 
 p,
+.main-nav,
 .location-title {
   font-family: "M PLUS 1p", sans-serif;
-  font-family: "Nanum Gothic", sans-serif;
   font-size: 1.1rem;
 }
 

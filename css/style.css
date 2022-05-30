@@ -40,6 +40,7 @@ a:hover {
 }
 
 p,
+.main-nav,
 .location-title {
   font-family: "M PLUS 1p", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
@@ -240,12 +241,8 @@ p,
   padding: 0;
 }
 
-.slid-item-left {
-  width: 12.5vw;
-}
-
-.slid-item-right {
-  width: 9.0909090909vw;
+.slide-item-left {
+  width: 12.5%;
 }
 
 .slide-img-left {
@@ -253,19 +250,23 @@ p,
   height: 80px;
 }
 
-.slide-img-right {
-  padding: 7px 7px 14px 7px;
-  height: 110px;
+.slide-left {
+  -webkit-animation: slide-left 40s infinite linear both;
+          animation: slide-left 40s infinite linear both;
 }
 
-.slide-left {
-  -webkit-animation: slide-left 30s infinite linear both;
-          animation: slide-left 30s infinite linear both;
+.slide-item-right {
+  width: 9.0909090909%;
 }
 
 .slide-right {
-  -webkit-animation: slide-right 45s infinite linear both;
-          animation: slide-right 45s infinite linear both;
+  -webkit-animation: slide-right 50s infinite linear both;
+          animation: slide-right 50s infinite linear both;
+}
+
+.slide-img-right {
+  padding: 7px 7px 14px 7px;
+  height: 110px;
 }
 
 @-webkit-keyframes slide-left {
