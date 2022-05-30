@@ -43,6 +43,7 @@ p,
 .main-nav,
 .location-title {
   font-family: "M PLUS 1p", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 1.1rem;
 }
 
@@ -70,8 +71,8 @@ p,
 }
 
 .lum-lightbox-inner img {
-  max-width: 120vw;
-  max-height: 80vh;
+  max-width: 95vw;
+  max-height: 70vh;
 }
 
 #footer {
@@ -111,6 +112,11 @@ p,
   .section-title {
     font-size: 2.7rem;
     margin-bottom: 30px;
+  }
+
+  .lum-lightbox-inner img {
+    max-width: 120vw;
+    max-height: 80vh;
   }
 }
 .main-container {
