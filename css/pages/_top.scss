@@ -21,6 +21,7 @@ $text-color: #fff;
 .main-visual {
   position: relative;
 }
+
 .peony {
   position: absolute;
   width: 60%;
@@ -51,6 +52,7 @@ $text-color: #fff;
   height: 100%;
   object-position: 70% 50%;
 }
+
 
 .main-nav {
   position: absolute;
@@ -169,10 +171,10 @@ $text-color: #fff;
 }
 
 .slide-item-right {
-  width: calc(100% / 11 );
+  width: calc(100% / 13 );
 }
 .slide-right {
-  animation: slide-right 60s infinite linear both;
+  animation: slide-right 65s infinite linear both;
 }
 .slide-img-right {
   padding: 7px 7px 14px 7px;
@@ -340,6 +342,13 @@ $text-color: #fff;
   .slide-img-left {
     padding: 18px 9px 9px 9px;
     height: 130px;
+  }
+
+  .slide-left {
+    animation: slide-left 60s infinite linear both;
+  }
+  .slide-right {
+    animation: slide-right 75s infinite linear both;
   }
 
   .slide-img-right {

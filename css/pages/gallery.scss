@@ -79,6 +79,7 @@ $bg-color: #000;
   width: 31%;
 }
 
+
 .gallery-lightbox {
   width: 31%;
   margin-bottom: 2.5%;
@@ -137,6 +138,12 @@ $bg-color: #000;
 
   .gallery-item-wrap::after {
     width: 23%;
+  }
+  .gallery-item-wrap::before {
+    content: "";
+    display: block;
+    width: 23%;
+    order: 1;
   }
 }
 

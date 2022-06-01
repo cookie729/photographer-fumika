@@ -120,5 +120,12 @@
   .gallery-item-wrap::after {
     width: 23%;
   }
+
+  .gallery-item-wrap::before {
+    content: "";
+    display: block;
+    width: 23%;
+    order: 1;
+  }
 }
 /*# sourceMappingURL=gallery.css.map */
