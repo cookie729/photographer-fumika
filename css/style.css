@@ -124,11 +124,11 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background: #000;
 }
 
 .slide-img {
   margin: 0;
-  background: #000;
 }
 
 .slide-list {

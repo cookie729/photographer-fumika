@@ -145,11 +145,11 @@ $text-color: #fff;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    background: $bg-color;
   }
 }
 .slide-img {
   margin: 0;
-  background: $bg-color;
 }
 
 .slide-list {
