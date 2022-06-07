@@ -160,14 +160,14 @@ $text-color: #fff;
 }
 
 .slide-item-left {
-  width: calc(100% / 8 );
+  width: calc(100% / 10 );
 }
 .slide-img-left {
   padding: 14px 7px 7px 7px;
   height: 80px;
 }
 .slide-left {
-  animation: slide-left 45s infinite linear both;
+  animation: slide-left 55s infinite linear both;
 }
 
 .slide-item-right {
