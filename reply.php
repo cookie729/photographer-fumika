@@ -94,41 +94,54 @@
 
       <img class="form-img contents-width" src="images/20220525flower-moon/20220516flower-moon.jpg" alt="">
 
-      
-      <div class="form main-container">
-        <div class="form-wrap contents-width">
+      <div class="contact-check main-container">
+        <?php
+            $dsn= 'mysql:host=localhost;dbname=photographer-fumika;charset8';
+            $user= 'fumika-photo';
+            $pass= 'fumika0613';
+            $dbh= new PDO($dsn,$user,$pass);
+            // var_dump($dbh);
+            
+            $name=$_POST['name'];
+            $email=$_POST['email'];
+            $number=$_POST['number'];
+            $message=$_POST['message'];
+            
+            $name= htmlspecialchars($name);
+            $email= htmlspecialchars($email);
+            $number= htmlspecialchars($number);
+            $message= htmlspecialchars($message);
+          ?>
+          <p class="check-text contents-width">
+            <?php
+            print $name;
+            print '様<br/>';
+            print 'メッセージありがとうございました。<br/>';
+            print $email;
+            print 'に確認メールを送りましたので、ご確認お願い致しします。';
+            
+            $mail_sub='ご連絡ありがとうございます。';
+            $mail_body= $name."様。\nこの度はご連絡頂きましてありがとうございます。\nメッセージの確認をし、再度ご連絡させて頂きますので宜しくお願い致します。";
+            $mail_body=html_entity_decode($mail_body, ENT_QUOTES, "UTF-8");
+            $mail_head='From: fu6ru3ze12@gmail.com';
+            mb_language('Japanese');
+            mb_internal_encoding("UTF-8");
+            mb_send_mail($email, $mail_sub, $mail_body, $mail_head);
 
-          <h1 class="section-title">Contact</h1>
-          
-          <form action="contact.php" method="post">
-            <div class="form-item contact-mtb mt">
-              <p class="form-item-label form-text">
-                <span class="form-item-label-required br">必須</span>Name</p>
-              <input type="text" name="name" class="form-item-input br">
-            </div>
-          
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required  br">必須</span>Email</p>
-              <input type="email" name="email" class="form-item-input br" placeholder="  例）example@gmail.com">
-            </div>
+            $sql = 'INSERT INTO contact_form (name, email, number, message) VALUES ("'.$name.'","'.$email.'","'.$number.'","'.$message.'")';
+            $stmt = $dbh->prepare($sql);
+            $stmt->execute();
 
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Phone</p>
-              <input type="text" name="number" class="form-item-input form-text br" placeholder="  例）000-0000-0000">
-            </div>
-          
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Message</p>
-              <textarea type="text" name="message" class="form-item-textarea br"></textarea>
-            </div>
-
-            <div class="form-item form button">
-              <button type="submit" class="form-btn form-text mb br bg" value="send">send</button>
-            </div>
-          </form>
-
-        </div>
+            $dbh = null;
+            ?>
+          </p>
+          <div class="contact-home-box contact-check main-container">
+            <a class="contact-home" href="index.html">Homeへ戻る <span class="contact-home-arrow">→</span>
+            <i class="home-icon fa-solid fa-house-chimney"></i>
+            </a>
+          </div>
       </div>
+
 
     </div>
   </main>

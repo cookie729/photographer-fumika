@@ -139,7 +139,7 @@
 }
 
 .slide-item-left {
-  width: 12.5%;
+  width: 10%;
 }
 
 .slide-img-left {
@@ -148,8 +148,8 @@
 }
 
 .slide-left {
-  -webkit-animation: slide-left 45s infinite linear both;
-          animation: slide-left 45s infinite linear both;
+  -webkit-animation: slide-left 55s infinite linear both;
+          animation: slide-left 55s infinite linear both;
 }
 
 .slide-item-right {

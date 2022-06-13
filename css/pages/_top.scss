@@ -207,6 +207,7 @@ $text-color: #fff;
   &-box {
     overflow-x: scroll;
     display: flex;
+    // overflow: inherit;
   }
   &-wrap {
     margin-right: 15px;

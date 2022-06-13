@@ -94,41 +94,97 @@
 
       <img class="form-img contents-width" src="images/20220525flower-moon/20220516flower-moon.jpg" alt="">
 
-      
-      <div class="form main-container">
-        <div class="form-wrap contents-width">
-
-          <h1 class="section-title">Contact</h1>
+      <div class="contact-check main-container">
+        <?php
+          $name=$_POST['name'];
+          $email=$_POST['email'];
+          $number=$_POST['number'];
+          $message=$_POST['message'];
           
-          <form action="contact.php" method="post">
-            <div class="form-item contact-mtb mt">
-              <p class="form-item-label form-text">
-                <span class="form-item-label-required br">必須</span>Name</p>
-              <input type="text" name="name" class="form-item-input br">
-            </div>
-          
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required  br">必須</span>Email</p>
-              <input type="email" name="email" class="form-item-input br" placeholder="  例）example@gmail.com">
-            </div>
+          $name=htmlspecialchars($name);
+          $email=htmlspecialchars($email);
+          $number=htmlspecialchars($number);
+          $message=htmlspecialchars($message);
+          ?>
+        <p class="check-text contents-width">
 
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Phone</p>
-              <input type="text" name="number" class="form-item-input form-text br" placeholder="  例）000-0000-0000">
-            </div>
-          
-            <div class="form-item contact-mtb">
-              <p class="form-item-label form-text"><span class="form-item-label-required br">必須</span>Message</p>
-              <textarea type="text" name="message" class="form-item-textarea br"></textarea>
-            </div>
+          <?php
+            if($name=='')
+            {
+              print '名前が入力されておりません。<br/>';
+            } else {
+              print $name;
+              print '様';
+            print ' ご連絡ありがとうございます。<br/>';
+            }
+          ?>
+        </p>
 
-            <div class="form-item form button">
-              <button type="submit" class="form-btn form-text mb br bg" value="send">send</button>
-            </div>
-          </form>
+        <p class="check-text contents-width">
+          <?php
+            if($email=='')
+            {
+              print 'メールアドレスが入力されておりません。<br/>';
+            } else {
+              print 'email : ';
+              print $email;
+              print '<br/>';
+            }
+          ?>
+        </p>
 
-        </div>
+        <p class="check-text contents-width">
+          <?php
+            if($number=='')
+            {
+              print '電話番号が入力されておりません。<br/>';
+            } else {
+              print 'number : ';
+              print $number;
+              print '<br/>';
+            }
+          ?>
+        </p>
+
+        <p class="check-text contents-width">
+          <?php
+            if($message=='')
+            {
+              print 'メッセージが入力されておりません。<br/>';
+            } else {
+              print 'message : ';
+              print $message;
+          ?>
+        </p>
+        <p class="check-text contents-width">
+          <?php
+              print 'でお間違いないでしょうか?<br/>';
+            }
+            ?>
+        </p>
+        <div class="check-text contents-width">
+          <?php
+            if($name==''|| $email==''|| $number==''|| $message=='')
+            {
+              print '<form>';
+                print '<input type="button" onclick="history.back()" value="戻る">';
+              print '</form>';
+            } else {
+              print '<form method="post" action="reply.php">';
+              print '<input name="name" type="hidden" value="'.$name.'">';
+              print '<input name="email" type="hidden" value="'.$email.'">';
+              print '<input name="number" type="hidden" value="'.$number.'">';
+              print '<input name="message" type="hidden" value="'.$message.'">';
+
+              print '<input type="button" onclick="history.back()" value="戻る">';
+              print '<input type="submit" value="送信">';
+              print '</form>';
+            }
+          ?>
+          </div>
       </div>
+
+      
 
     </div>
   </main>

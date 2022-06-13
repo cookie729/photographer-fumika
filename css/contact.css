@@ -61,9 +61,15 @@ p,
   text-align: left;
 }
 
+.site-logo {
+  height: 30px;
+  z-index: 150;
+}
+
 .site-title-img {
-  width: 200px;
-  height: 45px;
+  margin-top: 4px;
+  width: 250px;
+  height: 42px;
 }
 
 .lum-lightbox.lum-open {
@@ -97,8 +103,9 @@ p,
   }
 
   .site-title-img {
-    width: 300px;
-    height: 70px;
+    margin-top: 6px;
+    width: 350px;
+    height: 60px;
   }
 
   .site-title {
@@ -323,6 +330,74 @@ p,
     width: 85%;
   }
 }
+.contact-check {
+  position: relative;
+  z-index: 100;
+  margin: 40px auto 0 auto;
+}
+
+.check-text {
+  color: #fff;
+  margin: 7px auto 7px auto;
+}
+
+input[type=button] {
+  margin-right: 8px;
+}
+
+input[type=button],
+input[type=submit] {
+  margin-top: 5px;
+  padding: 2px 8px;
+  background: #fff;
+  transition-duration: 0.2s;
+}
+input[type=button]:hover,
+input[type=submit]:hover {
+  opacity: 0.7;
+  transition-duration: 0.2s;
+}
+
+.contact-home-box {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  margin: 20px auto 0 auto;
+}
+.contact-home-box .contact-home {
+  color: #fff;
+}
+.contact-home-box .contact-home::after {
+  content: "";
+  display: block;
+  width: 0;
+  padding: 0;
+  transition: width 0.3s;
+  border-bottom: 1px solid #fff;
+}
+.contact-home-box .contact-home:hover::after {
+  width: 155px;
+  transition-duration: 0.3s;
+}
+
+.contact-home-box:hover .contact-home-arrow {
+  transition-duration: 0.2s;
+  margin-left: 4px;
+  transition-delay: 0.4s;
+}
+.contact-home-box:hover .home-icon {
+  color: #feb1fe;
+  transition-delay: 0.6s;
+  transition-duration: 0.2s;
+}
+
+.home-icon {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 130px;
+}
+
 body {
   position: relative;
   overflow: hidden;
@@ -457,6 +532,15 @@ body {
 .form-item-textarea {
     width: 100%;
   }
+
+  .contact-check {
+    margin: 40px 0 0 auto;
+  }
+
+  .contact-home-box {
+    margin: 40px auto 0 auto;
+    width: 80%;
+  }
 }
 @media (min-width: 1000px) {
   .form-item {
@@ -466,6 +550,14 @@ body {
   .form-item-input,
 .form-item-textarea {
     width: 500px;
+  }
+
+  form .button {
+    margin: 0 auto 0 0;
+  }
+
+  .contact-home-box {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=contact.css.map */
