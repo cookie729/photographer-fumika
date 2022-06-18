@@ -347,8 +347,10 @@ input[type=button] {
 
 input[type=button],
 input[type=submit] {
+  color: #ff44d3;
   margin-top: 5px;
   padding: 2px 8px;
+  border-radius: 5px;
   background: #fff;
   transition-duration: 0.2s;
 }

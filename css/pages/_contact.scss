@@ -20,8 +20,10 @@ input[type="button"] {
 
 input[type="button"],
 input[type="submit"] {
+  color: rgb(255, 68, 211);
   margin-top: 5px;
   padding: 2px 8px;
+  border-radius: 5px;
   background: $text-color;
   transition-duration: .2s;
   &:hover {

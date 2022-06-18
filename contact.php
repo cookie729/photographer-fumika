@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name=”description” content=”ここに内容”>
   <title>Photographer Fumika</title>
+  <link rel="icon" href="images/photo-icon.png">
   <link rel =”stylesheet” href=”https://unpkg.com/destyle.css@1.0.5/destyle.css”>
   <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous-basic.min.css">
   <script src="https://kit.fontawesome.com/d0896c8887.js" crossorigin="anonymous"></script>
